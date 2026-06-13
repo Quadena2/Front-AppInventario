@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollCategoria"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Categorías"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Crear -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear categoría:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etCategoriaNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"/>
+
+        <EditText
+            android:id="@+id/etCategoriaDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción (opcional)"/>
+
+        <Button
+            android:id="@+id/btnCategoriaCrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear categoría"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Eliminar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar categoría:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etCategoriaIdEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID de la categoría"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btnCategoriaEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DC3545"
+            android:text="Eliminar categoría"/>
+
+        <!-- Listar -->
+        <Button
+            android:id="@+id/btnCategoriaListar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar categorías"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvResultadoCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Las categorías aparecerán aquí..."/>
+
+    </LinearLayout>
+</ScrollView>

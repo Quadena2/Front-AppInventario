@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebSocket — Stock en Tiempo Real"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvEstadoWS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#D4EDDA"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Sección de prueba -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disparar evento de prueba:"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualiza el stock via REST para ver el evento llegar por WebSocket"
+        android:background="#FFF3CD"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etIdProductoWS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID del producto"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/etStockPrueba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nuevo stock"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnDispararEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar stock y ver evento WebSocket"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Eventos recibidos -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eventos recibidos del servidor:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvMensajesWS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Esperando eventos..."/>
+
+    </ScrollView>
+
+</LinearLayout>

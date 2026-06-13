@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollGraphql"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GraphQL — Anti Over-Fetching"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvComparacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D4EDDA"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Crear producto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear producto via GraphQL:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etGqlNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"/>
+
+        <EditText
+            android:id="@+id/etGqlPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/etGqlStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stock"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría:"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnGqlCrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear via GraphQL"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Actualizar stock -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar stock via GraphQL:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etGqlIdStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID del producto"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etGqlNuevoStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nuevo stock"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btnGqlActualizarStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar stock via GraphQL"/>
+
+        <!-- Eliminar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar producto via GraphQL:"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etGqlIdEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID del producto"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btnGqlEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DC3545"
+            android:text="Eliminar via GraphQL"/>
+
+        <!-- ── Demostración Anti Over-Fetching ────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Demostración Anti Over-Fetching:"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los 3 botones consultan el mismo endpoint /graphql pero cada uno descarga un JSON diferente"
+            android:background="#D6E4F0"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnSoloNombrePrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solo: nombre + precio"
+            android:backgroundTint="#1E7145"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/btnNombrePrecioStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solo: nombre + precio + stock"
+            android:backgroundTint="#2E75B6"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/btnGqlListar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todos los campos"
+            android:backgroundTint="#7030A0"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- ── Resultado ──────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/tvResultadoGraphQL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Los productos aparecerán aquí..."/>
+
+    </LinearLayout>
+</ScrollView>
