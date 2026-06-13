@@ -1,4 +1,4 @@
-# App Inventario - Cliente Móvil 📱📦
+# App Inventario - Cliente Móvil 
 
 Aplicación nativa para Android diseñada para la gestión y visualización de un inventario de productos. Este cliente móvil se conecta a un servidor en la nube y consume datos mediante múltiples protocolos para ofrecer una experiencia fluida y en tiempo real.
 
